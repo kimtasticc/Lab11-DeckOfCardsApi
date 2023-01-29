@@ -1,0 +1,22 @@
+﻿@model Lab11DeckOfCardsApi.Models.CardDeckApi
+
+@{
+    ViewData["Title"] = "Draw 5 Cards";
+}
+
+<h1>You Drew 5 Cards:</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        @foreach (var item in Model.cards)
+        {
+            <dd class="col=sm-2">
+                <span>@item.value of @item.suit</span>
+            </dd>
+            <dd class="col=sm-2">
+                <img src="@item.image">
+            </dd>
+        }
+    </dl>
+</div>
